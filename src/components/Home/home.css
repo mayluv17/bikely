@@ -1,0 +1,56 @@
+.hero-section {
+  grid-template-columns: 1fr 1fr;
+  margin-inline: 12%;
+  align-items: center;
+  height: 100vh;
+}
+.btn-lg {
+  width: 355px;
+  background-color: #fff;
+  color: var(--primary-color);
+  text-align: center;
+  border-radius: 10px;
+  text-justify: auto;
+  transition-duration: 0.4s;
+  padding: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+.btn-lg:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: #114b3e;
+  color: #fff;
+}
+.btn-wrap {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.btn-lg span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-lg span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-lg:hover span {
+  padding-right: 25px;
+}
+
+.btn-lg:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.bikely-logo-big {
+  width: 100%;
+}
