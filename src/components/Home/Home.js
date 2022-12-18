@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logobig from "./images/logobig.png";
+import Logobig from "../../assets/logobig.png";
 import "./home.css";
 
 export default function Home() {
