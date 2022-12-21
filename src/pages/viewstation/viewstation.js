@@ -3,10 +3,7 @@ import Header from "../../components/header/Header";
 import "./viewstation.css";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-// AIzaSyABZHUfZhWdj8YJ6LW48PJhzd_7f8xulUg;
-
 export default function ViewStation() {
-  //   console.log(process.env.REACT_APP_GOOGLE_MAP_API);
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API,
   });
@@ -37,7 +34,8 @@ export default function ViewStation() {
   );
 }
 function Map() {
-  const location = useMemo(() => ({ lat: 60.184312, lng: 24.826671 }), []);
+  // y / x
+  const location = useMemo(() => ({ lat: 44, lng: -80 }), []);
   return (
     <GoogleMap zoom={10} center={location} mapContainerClassName="map-area">
       <Marker position={location} />

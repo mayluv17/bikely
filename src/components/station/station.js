@@ -4,7 +4,7 @@ import stationIcon from "../../assets/Icons/minimize.png";
 import eyeIcon from "../../assets/Icons/eye.png";
 import { Link } from "react-router-dom";
 
-export default function Station() {
+export default function Station({ stationId }) {
   return (
     <div className="stations-row grid">
       <div className="station-name-wrap">
@@ -16,7 +16,7 @@ export default function Station() {
         <h6>Länsituulenkuja 3, Espoo</h6>
       </div>
       <div className="view-btn-wrap">
-        <Link>
+        <Link to={`/station/${stationId}`}>
           <img className="eye-icon" src={eyeIcon} alt="View icon" /> view
         </Link>
       </div>

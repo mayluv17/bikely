@@ -9,11 +9,11 @@ export default function Stations() {
       <Header />
       <div className="trip-container">
         <h2>Stations</h2>
+        <Station stationId="1" />
+        {/* <Station />
         <Station />
         <Station />
-        <Station />
-        <Station />
-        <Station />
+        <Station /> */}
       </div>
     </>
   );
