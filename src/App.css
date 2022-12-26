@@ -26,3 +26,21 @@ h3 {
   color: #ffffff;
   cursor: pointer;
 }
+
+.pagination-wrap {
+  justify-content: center;
+  color: #ffffff;
+  align-items: center;
+  margin-block: 84px;
+}
+.pagination-wrap a {
+  margin-inline: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-wrap img {
+  width: 24px;
+}
+.pagination-wrap img:nth-child(2) {
+}
