@@ -47,9 +47,17 @@ h2 {
   }
 
   .trip-container {
-    margin-inline: 40px;
+    margin-inline: 4%;
+    margin-top: 8px;
   }
   .trip-row {
     height: 56px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .trip-container {
+    margin-inline: 4%;
+    margin-top: 8px;
   }
 }

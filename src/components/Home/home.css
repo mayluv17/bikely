@@ -54,3 +54,26 @@
 .bikely-logo-big {
   width: 100%;
 }
+
+@media (max-width: 600px) {
+  .btn-lg {
+    width: 100%;
+    padding-block: 20px;
+  }
+  .hero-section {
+    margin-inline: 8%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .logo-area {
+    display: flex;
+    order: -1;
+    height: 80px;
+  }
+  .bikely-logo-big {
+    width: 100px;
+    margin-inline: auto;
+    align-self: baseline;
+  }
+}

@@ -15,7 +15,7 @@ export default function Home() {
             Bike Stations <span></span>
           </Link>
         </div>
-        <div>
+        <div className="logo-area">
           <img
             className="bikely-logo-big"
             src={Logobig}

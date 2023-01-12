@@ -11,11 +11,11 @@ export default function Station({ stationId }) {
         <img src={stationIcon} alt="station-icon" />
         <h6>Hanasaari</h6>
       </div>
-      <div className="location-wrap">
+      <div className="location-wrap hide-sm">
         <img src={pin} alt="location icon" />
         <h6>Länsituulenkuja 3, Espoo</h6>
       </div>
-      <div className="view-btn-wrap">
+      <div className="view-btn-wrap flex">
         <Link to={`/station/${stationId}`}>
           <img className="eye-icon" src={eyeIcon} alt="View icon" /> view
         </Link>
