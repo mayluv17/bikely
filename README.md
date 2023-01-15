@@ -1,4 +1,4 @@
-Bikely is a simple bike trip app. clic here to view demo
+Bikely is a simple bike trip app. click here to view demo
 
 
 ## Features
