@@ -9,6 +9,7 @@ import Header from "../../components/header/Header";
 export default function Trips() {
   const [trips, setTrips] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
+
   const { pageNumber } = useParams();
   let currentPage = parseInt(pageNumber) || 1;
   let nextPage = 0;
@@ -32,8 +33,12 @@ export default function Trips() {
   async function getTrips() {
     const res = await fetch(url);
     const data = await res.json();
-    setTrips(data.data);
-    setTotalPages(data.number_of_page);
+
+    if (data.success === 1) {
+      setTrips(data.data);
+      setTotalPages(data.number_of_page);
+    } else {
+    }
   }
   const tripComponents = trips.map((trip) => (
     <Trip key={crypto.randomUUID()} data={trip} />

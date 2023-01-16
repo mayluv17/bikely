@@ -14,7 +14,7 @@ function App() {
         <Route exact path="trips/:pageNumber" element={<Trips />} />
         <Route exact path="stations" element={<Stations />} />
         <Route exact path="stations/:pageNumber" element={<Stations />} />
-        <Route exact path="station/:stationID" element={<Viewstation />} />
+        <Route exact path="viewstation/:stationID" element={<Viewstation />} />
       </Routes>
     </>
   );
