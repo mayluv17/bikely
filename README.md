@@ -1,4 +1,27 @@
-# Getting Started with Create React App
+Bikely is a simple bike trip app. click here to view demo
+
+
+## Features
+
+- Bike trips with pagination
+- Bike station with basic details
+-  View bike station with map feature, top five return station, top five departure station
+
+## Tech Used
+PHP, mysql for backend
+ReactJs for frontend
+
+## Deployment
+Bikely Backend was deployed on AWS. Frontend was deployed on Git
+
+## Test
+React testing library
+
+And of course Dillinger itself is open source with a [public repository][dill]
+ on GitHub.
+
+## Installation
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
