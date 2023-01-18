@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bikely/static/css/main.aadfc045.css",
+    "main.js": "/bikely/static/js/main.ab5669e9.js",
+    "static/js/787.cb4b6cb6.chunk.js": "/bikely/static/js/787.cb4b6cb6.chunk.js",
+    "static/media/logobig.png": "/bikely/static/media/logobig.2fef88249e60448622f9.png",
+    "index.html": "/bikely/index.html",
+    "main.aadfc045.css.map": "/bikely/static/css/main.aadfc045.css.map",
+    "main.ab5669e9.js.map": "/bikely/static/js/main.ab5669e9.js.map",
+    "787.cb4b6cb6.chunk.js.map": "/bikely/static/js/787.cb4b6cb6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aadfc045.css",
+    "static/js/main.ab5669e9.js"
+  ]
+}
