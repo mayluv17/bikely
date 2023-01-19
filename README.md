@@ -1,6 +1,6 @@
 Bikely is a simple city bike app.
 
-[![](https://github.com/mayluv17/bikely/src/assets/screenshot.png)](https://github.com/mayluv17/bikely/src/assets/screenshot.png)
+[![](https://github.com/mayluv17/bikely/blob/main/src/assets/screenshot.png?raw=true)](https://github.com/mayluv17/bikely/blob/main/src/assets/screenshot.png?raw=true)
 
 ## Links
 
