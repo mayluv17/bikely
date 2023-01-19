@@ -8,15 +8,35 @@ import rightIcon from "../../assets/Icons/chevron-right.png";
 
 export default function Stations() {
   const [stations, setStations] = useState([]);
-  const [totalPages, setTotalPages] = useState(0);
-
+  const [totalRecords, setTotalRecords] = useState(0);
   const { pageNumber } = useParams();
+  const perPage = 10;
+  const totalPages = totalRecords / perPage;
   let currentPage = parseInt(pageNumber) || 1;
   let nextPage = 0;
   let prevPage = 0;
+  const url = `http://44.211.202.17/bikely/stations/`;
+  let stationComponents = "";
 
-  const url = `http://44.211.202.17/bikely/stations/${currentPage}`;
+  async function getStation() {
+    const res = await fetch(url);
+    const data = await res.json();
 
+    if (data.success === 1) {
+      setStations(data.data);
+      setTotalRecords(data.total_record);
+    } else {
+    }
+  }
+
+  if (pageNumber <= totalRecords) {
+    const toPage = currentPage * perPage;
+    const fromPage = toPage - perPage;
+
+    stationComponents = stations
+      .slice(fromPage, toPage)
+      .map((station) => <Station key={crypto.randomUUID()} data={station} />);
+  }
   function paginateNext() {
     if (currentPage < totalPages) {
       return (nextPage = parseInt(currentPage) + 1);
@@ -29,20 +49,6 @@ export default function Stations() {
       return 1;
     }
   }
-  async function getStation() {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    if (data.success === 1) {
-      setStations(data.data);
-      setTotalPages(data.number_of_page);
-    } else {
-    }
-  }
-  const stationComponents = stations.map((station) => (
-    <Station key={crypto.randomUUID()} data={station} />
-  ));
-
   useEffect(() => {
     getStation();
   }, [pageNumber]);
@@ -56,13 +62,13 @@ export default function Stations() {
       </div>
       <div className="flex pagination-wrap">
         <Link
-          to={`/trips/${paginatePrev()}`}
+          to={`/stations/${paginatePrev()}`}
           style={{ pointerEvents: currentPage === 1 ? "none" : "" }}
         >
           <img alt="left-icon" src={leftIcon} /> Previous
         </Link>
         <Link
-          to={`/trips/${paginateNext()}`}
+          to={`/stations/${paginateNext()}`}
           style={{ pointerEvents: currentPage >= totalPages ? "none" : "" }}
         >
           Next
