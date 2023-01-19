@@ -15,7 +15,7 @@ export default function Trips() {
   let nextPage = 0;
   let prevPage = 0;
 
-  const url = `http://44.211.202.17/bikely/trips/${currentPage}`;
+  const url = `https://ec2-44-211-202-17.compute-1.amazonaws.com/bikely/trips/${currentPage}`;
 
   function paginateNext() {
     if (currentPage < totalPages) {

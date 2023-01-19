@@ -25,7 +25,7 @@ export default function Header() {
               <Link to="/stations">Stations</Link>
             </li>
             <li>
-              <Link to="">GitHub</Link>
+              <a href="https://github.com/mayluv17">GitHub</a>
             </li>
           </ul>
         </nav>

@@ -11,7 +11,7 @@ export default function ViewStation() {
   const { stationID } = useParams();
   let currentPage = parseInt(stationID);
 
-  const url = `http://44.211.202.17/bikely/stations/details/${currentPage}`;
+  const url = `https://ec2-44-211-202-17.compute-1.amazonaws.com/bikely/stations/details/${currentPage}`;
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API,

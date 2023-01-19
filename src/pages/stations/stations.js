@@ -10,12 +10,13 @@ export default function Stations() {
   const [stations, setStations] = useState([]);
   const [totalRecords, setTotalRecords] = useState(0);
   const { pageNumber } = useParams();
+
   const perPage = 10;
   const totalPages = totalRecords / perPage;
   let currentPage = parseInt(pageNumber) || 1;
   let nextPage = 0;
   let prevPage = 0;
-  const url = `http://44.211.202.17/bikely/stations/`;
+  const url = `https://ec2-44-211-202-17.compute-1.amazonaws.com/bikely/stations/`;
   let stationComponents = "";
 
   async function getStation() {
@@ -29,7 +30,8 @@ export default function Stations() {
     }
   }
 
-  if (pageNumber <= totalRecords) {
+  if (currentPage <= totalRecords) {
+    console.log(currentPage);
     const toPage = currentPage * perPage;
     const fromPage = toPage - perPage;
 
@@ -62,13 +64,13 @@ export default function Stations() {
       </div>
       <div className="flex pagination-wrap">
         <Link
-          to={`/stations/${paginatePrev()}`}
+          to={`/trips/${paginatePrev()}`}
           style={{ pointerEvents: currentPage === 1 ? "none" : "" }}
         >
           <img alt="left-icon" src={leftIcon} /> Previous
         </Link>
         <Link
-          to={`/stations/${paginateNext()}`}
+          to={`/trips/${paginateNext()}`}
           style={{ pointerEvents: currentPage >= totalPages ? "none" : "" }}
         >
           Next
